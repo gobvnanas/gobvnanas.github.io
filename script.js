@@ -135,6 +135,18 @@ document.addEventListener("DOMContentLoaded", function() {
   infiniteScroll(column2);
 });
 
+function setViewportHeight() {
+        // Lấy chiều cao thực tế của cửa sổ hiển thị (trừ đi thanh công cụ nếu có)
+        const viewportHeight = window.innerHeight;
+        
+        // Áp dụng chiều cao thực tế này cho phần tử .column-left
+        document.querySelector('.column-left').style.height = `${viewportHeight}px`;
+    }
+
+    // Gọi hàm khi tải trang hoặc khi thay đổi kích thước cửa sổ
+    window.addEventListener('load', setViewportHeight);
+    window.addEventListener('resize', setViewportHeight);
+
 
 
 
