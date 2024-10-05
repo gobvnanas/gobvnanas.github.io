@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded',function(event){
   }, 100);
   }
   else if (typeof fnCallback == 'function') {
-  setTimeout(fnCallback, 700);
+  setTimeout(fnCallback, 600);
   }
   }
   function StartTextAnimation(i) {
@@ -134,6 +134,9 @@ document.addEventListener("DOMContentLoaded", function() {
   infiniteScroll(column1);
   infiniteScroll(column2);
 });
+
+
+
 
 
 
