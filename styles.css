@@ -34,6 +34,7 @@ body, html {
     width: 25%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .column-right {
@@ -46,11 +47,32 @@ body, html {
     align-items: center;
 }
 
-/* Khi ở thiết bị di động với chiều rộng nhỏ hơn 768px */
-@media (min-width: 334px) {
-    .column-left {
-        font-size: 15.5px;
-    }
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: none;
+}
+
+.menu-list li:hover {
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+}
+
+.menu-list li:hover::before {
+    content: ">";
+    position: absolute;
+    left: 0px;
+    color: rgb(254, 254, 254);
+}
 
 @media (max-width: 1024px) {
     .column-right {
@@ -70,6 +92,8 @@ body, html {
     }
 }
 
+
+
 @media (min-width: 1182px) {
     .column-left {
         width: 25%;
@@ -81,19 +105,19 @@ body, html {
 
 @media (min-width: 1280px) {
     .column-left {
-        width: 27%;
+        width: 26%;
     }
     .column-right {
-        width: 73%;
+        width: 74%;
     }
 }
 
 @media (min-width: 1440px) {
     .column-left {
-        width: 24%;
+        width: 25%;
     }
     .column-right {
-        width: 76%;
+        width: 75%;
     }
 }
 
@@ -190,7 +214,7 @@ body, html {
 .hahaha{
     font-kerning: none;
     font-feature-settings: "liga" 0;
-    color: #1d1d1d;
+    color: #000000;
     text-decoration: underline;
 }
 
