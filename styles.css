@@ -13,7 +13,6 @@ body, html {
     overscroll-behavior-y: none;
 }
 
-
 ::-moz-selection {
     color: white;
     background: black;
@@ -34,7 +33,6 @@ body, html {
     width: 25%;
     display: flex;
     flex-direction: column;
-    
 }
 
 .column-right {
@@ -55,24 +53,24 @@ body, html {
 
 .menu-list li {
     position: relative;
-    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     transition: none;
 }
 
 .menu-list li:hover {
-    background-color: rgb(30, 30, 30);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding-left: 20px;
+    border: 1px solid black;
 }
 
 .menu-list li:hover::before {
     content: ">";
     position: absolute;
     left: 0px;
-    color: rgb(254, 254, 254);
+    color: rgb(0, 0, 0);
 }
+
 
 @media (max-width: 1024px) {
     .column-right {
@@ -136,7 +134,7 @@ body, html {
 
 .image-column img {
     width: 100%;
-    margin-bottom: 10px; /* Tạo khoảng cách giữa các ảnh */
+    margin-bottom: 10px;
     display: block;
 }
 
@@ -144,6 +142,7 @@ body, html {
     width: 100%;
     height: auto;
     border: 1px solid black;
+    
 }
 
 .image-column:hover {
@@ -185,7 +184,7 @@ body, html {
     flex-grow: 1;
     overflow-y: auto;
     height: 50%;
-    padding-right: 12px;
+    padding-right: 11px;
 }
 
 .dropdown-header {
@@ -195,7 +194,6 @@ body, html {
 .dropdown-content {
     display: none;
     overflow: hidden;
-    transition: height 0.5s ease, padding 0.5s ease;
 }
 
 .dropdown-content.open {
@@ -205,6 +203,8 @@ body, html {
 
 .tab-content {
     display: none;
+    overflow-y: auto;
+
 }
 
 .tab-content.active {
@@ -214,23 +214,33 @@ body, html {
 .hahaha{
     font-kerning: none;
     font-feature-settings: "liga" 0;
-    color: #000000;
+    color: black;
     text-decoration: underline;
 }
 
-span {
-    border-right: 11px solid;
-    color: rgb(0, 0, 0);
+.f{
+    text-decoration:none;
+}
+
+.f:hover{
+    border: 1px solid black;
+}
+
+em{
+    border-right: 11px solid black;
     animation: caret 1s steps(1) infinite;
 }
-  
+
+.project-item{
+    color: black;
+}
+
 @keyframes caret {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
-  }
+}
 
-  
-
-
-    
+.dropdown-content a.active {
+    border: 1px solid black;
+}
