@@ -1,10 +1,8 @@
 
 function showTabContent(tab) {
-    
     document.querySelectorAll('.tab-content').forEach(function (content) {
         content.style.display = 'none';
     });
-
     document.getElementById(tab).style.display = 'block';
 }
 
@@ -94,7 +92,7 @@ document.addEventListener('DOMContentLoaded',function(event){
       ];
   function typeWriter(text, i, fnCallback) {
   if (i < (text.length)) {
-  document.querySelector("p").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+  document.querySelector("p").innerHTML = text.substring(0, i+1) +'<em aria-hidden="true"></em>';
 
   setTimeout(function() {
       typeWriter(text, i + 1, fnCallback)
@@ -119,6 +117,53 @@ document.addEventListener('DOMContentLoaded',function(event){
   StartTextAnimation(0);
   });
 
+
+  let activeFilters = [];
+
+  function filterImages() {
+      let images = document.querySelectorAll('.filter');
+  
+      images.forEach(function(image) {
+          if (activeFilters.length === 0 || activeFilters.includes('all')) {
+              image.style.display = 'block';
+          } else {
+              let imageClasses = Array.from(image.classList);
+              let match = activeFilters.some(filter => imageClasses.includes(filter));
+  
+              image.style.display = match ? 'block' : 'none';
+          }
+      });
+  }
+  
+  document.querySelectorAll('.dropdown-content a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+  
+          let filter = this.dataset.filter;
+
+          if (filter === 'all') {
+              activeFilters = ['all'];
+          } else {
+              let filterIndex = activeFilters.indexOf(filter);
+  
+              if (filterIndex > -1) {
+                  activeFilters.splice(filterIndex, 1);
+              } else {
+                  activeFilters = activeFilters.filter(f => f !== 'all');
+                  activeFilters.push(filter);
+              }
+          }
+          document.querySelectorAll('.dropdown-content a').forEach(function(item) {
+              item.classList.remove('active');
+          });
+          activeFilters.forEach(f => {
+              document.querySelector(`[data-filter="${f}"]`).classList.add('active');
+          });
+          filterImages();
+      });
+  });
+  
+
 function infiniteScroll(column) {
   column.addEventListener('scroll', () => {
     if (column.scrollTop + column.clientHeight >= column.scrollHeight - 5) {
@@ -134,10 +179,3 @@ document.addEventListener("DOMContentLoaded", function() {
   infiniteScroll(column1);
   infiniteScroll(column2);
 });
-
-
-
-
-
-
-
