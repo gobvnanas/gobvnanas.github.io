@@ -15,8 +15,8 @@
                 <a href="/" onclick="showTabContent('home')" class="hahaha">gobvnanas</a>
             </div>
             <div class="row menu">Pages:
-                <a href="#" onclick="showTabContent('projects')" class="hahaha">projects</a> •
-                <a href="#" onclick="showTabContent('info')" class="hahaha">info</a> •
+                <a href="#" onclick="showTabContent('projects')" class="hahaha">projects</a> ·
+                <a href="#" onclick="showTabContent('info')" class="hahaha">info</a> ·
                 <a href="#" onclick="showTabContent('contact')" class="hahaha">contact</a>
             </div>
             
@@ -27,86 +27,108 @@
                 
                 <div id="projects" class="tab-content" style="display:none;">
                 
-                <ul class="menu-list">
-                    <li>Web Design ABC Corp</li>
-                    <li>Branding and Graphic Design</li>
-                    <li>E-commerce Website</li>
-                    <li>Responsive Web Design</li>
-                    <li>Branding and Graphic Design</li>
-                </ul>
+                    <ul class="menu-list">
+                        <li class="project-item">
+                          <span class="project-name">STAN MUSIC AWARDS</span> <br>
+                          <span class="project-type">branding, visual identity, copywriting</span> <br>
+                          <span class="project-year">2024</span> 
+                        </li>
+                        
+                        <li class="project-item">
+                          <span class="project-name">TICOS COFFEE</span> <br>
+                          <span class="project-type">logo design, branding, visual identity, copywriting</span> <br>
+                          <span class="project-year">2024</span>
+                        </li>
+                        
+                        <li class="project-item">
+                          <span class="project-name">DEL LUNA DECOR</span> <br>
+                          <span class="project-type">web design</span> <br>
+                          <span class="project-year">2022</span>
+                        </li>
+                        
+                        <li href="#" class="project-item">
+                          <span class="project-name">NOT JUST A LABEL</span> <br>
+                          <span class="project-type">ecommerce design</span> <br>
+                          <span class="project-year">2021</span>
+                        </li>
+                        
+                        <li class="project-item">
+                          <span class="project-name">PROJECT FIVE</span> <br>              
+                          <span class="project-type">graphic design, campaigns</span> <br>
+                          <span class="project-year">2020</span>
+                        </li>
+                      </ul>
                
                 </div>
                 
                 <div id="info" class="tab-content" style="display:none;">
-                    <p><strong>education:</strong> Bachelor of Design, XYZ University</p>
-                    --------------------------------
-                    <p><strong>experience:</strong> 5+ years in web and graphic design.</p>
-                    --------------------------------
-                    <p><strong>skills:</strong> HTML, CSS, JavaScript, Adobe Creative Suite, Figma.</p>
-                    --------------------------------
-                    credits:
+                    <p><strong>> education:</strong> bachelor of design, XYZ university</p>
+                    <p><strong>> experience:</strong> 5+ years in web and graphic design.</p>
+                    <p><strong>> skills:</strong> HTML, CSS, javascript, adobe creative suite, figma.</p>
+                    > credits <br>
                     Site designed by @<a href="https://www.instagram.com/gobvnanas/" target="_blank" class="hahaha">gobvnanas</a>.<br>
                     Type set in <a href="https://rubjo.github.io/victor-mono/" target="_blank" class="hahaha">Victor Mono</a> by Rune Bjørnerås</a>.<br>
-                    © 2024, gobvnanas. All rights reserved.
+                    ©2024 gobvnanas. All rights reserved.
                 </div>
                 
                 <div id="contact" class="tab-content" style="display:none;">
-                    <p>> Hãy cùng nhau tạo ra những tác phẩm tuyệt vời.
-
-                        Bạn đang muốn chuyển đổi doanh nghiệp của mình với một chuyên gia sáng tạo? Hãy hợp tác với chúng tôi!
-                        
-                        Để khám phá cách tôi có thể giúp bạn, vui lòng xem các dịch vụ của tôi tại đây.
-                        
-                        Liên hệ với tôi qua gobvnanas@gmail.com hoặc gửi cho tôi một dòng trên Instagram, tôi sẽ trả lời bạn ngay!</p>
-                    <p><strong>Phone:</strong> +123 456 7890</p>
+                    <p>> mail <br> gobvnanas@gmail.com</p>
+                    <p><strong>> phone</strong> <br> +123 456 7890</p>
                     
-                    <p><strong>Social Media:</strong></p>
-                    <ul> 
-                        <li><a href="#" class="f hahaha">linkedIn</a></li>
-                        <li><a href="#" class="f hahaha">twitter</a></li>
-                        <li><a href="#" class="f hahaha">instagram</a></li>
+                    <strong>> social media</strong> <br>
+                        <a href="#" class="hahaha">linkedin</a> ·
+                        <a href="#" class="hahaha">twitter</a> ·
+                        <a href="#" class="hahaha">instagram</a>
                     </ul>
                 </div>
             </div>
             
             <div class="row dropdown">
-                <div class="dropdown-header" onclick="toggleDropdown()">> filter</div>
+                <div class="dropdown-header" onclick="toggleDropdown()">> filters</div>
                 <div class="dropdown-content">
                     <p>
-                        <a href="#" class="f hahaha">Art Direction</a>, 
-                        <a href="#" class="f hahaha">Brand Creation</a>, 
-                        <a href="#" class="f hahaha">Campaigns</a>, 
-                        <a href="#" class="f hahaha">Copywriting</a>,
-                        <a href="#" class="f hahaha">Naming</a>, 
-                        <a href="#" class="f hahaha">Print</a>,
-                        <a href="#" class="f hahaha">Strategy</a>,
-                        <a href="#" class="f hahaha">Visual Identity</a>.  
+                        <a href="#" class="f hahaha" data-filter="all">all</a> ·
+                        <a href="#" class="f hahaha" data-filter="art-direction">art direction</a> ·
+                        <a href="#" class="f hahaha" data-filter="brand-creation">brand creation</a> ·
+                        <a href="#" class="f hahaha" data-filter="campaigns">campaigns</a> ·
+                        <a href="#" class="f hahaha" data-filter="copywriting">copywriting</a> ·
+                        <a href="#" class="f hahaha" data-filter="naming">naming</a> ·
+                        <a href="#" class="f hahaha" data-filter="print">print</a> ·
+                        <a href="#" class="f hahaha" data-filter="strategy">strategy</a> ·
+                        <a href="#" class="f hahaha" data-filter="visual-identity">visual identity</a> ·
+                        <a href="#" class="f hahaha" data-filter="brand-strategy">brand strategy</a>
                     </p>
                 </div>
             </div>
+            
         </div>
 
 
         <div class="column-right">
             <div class="image-grid">
                 <div class="image-column" id="column-a">
-                    <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/03/Smart-Shuffle-Gif-1.gif" alt="Image 8">
-                    <img src="https://i.pinimg.com/originals/e7/da/42/e7da42785632b22e4c322e46eb3691fa.gif" alt="Image 12">  
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spotify_logo_with_color_system.gif" alt="Image 1">
-                    <img src="https://64.media.tumblr.com/49a933b4905b950c1bddcfc5caf16fee/836701f1393cfc3b-33/s1280x1920/4f1a3ac55cad963736212483bf112aca850a7139.gif" alt="Image 15">
-                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fcaece75636503.5c65c383cee3a.gif" alt="Image 4">
-                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/22842b93973343.5eb177f5237ee.gif" alt="Image 4">
+                    <img src="/assets/11.jpg" alt="Image 1" class="filter art-direction brand-strategy naming">
+                    <img src="./assets/3.jpg" alt="Image 2" class="filter brand-creation strategy print">  
+                    <img src="./assets/9.jpg" alt="Image 3" class="filter campaigns copywriting">
+                    <img src="./assets/13.jpg" alt="Image 4" class="filter strategy">
+                    <img src="./assets/8.jpg" alt="Image 5" class="filter visual-identity brand-strategy">
+                    <img src="./assets/5.jpg" alt="Image 6" class="filter visual-identity brand-strategy strategy">
                 </div>
         
                 <div class="image-column" id="column-b">
-                    <img src="https://freight.cargo.site/w/600/i/944e23dda526c862aeffa3dfaca86805bd668a89a4315449aed00fb4e22b9d8a/Oct-15-2021-17-00-42.gif" alt="Image 7">
-                    <img src="https://media.itsnicethat.com/original_images/BecauseParenting_Red.gif" alt="Image 2">
-                    <img src="https://media3.giphy.com/media/0xKUmdMlInz20cjnrT/200w.gif" alt="Image 9">
-                    <img src="https://media.itsnicethat.com/original_images/spotify-wrapped-identity-2022-graphic-design-itsnicethat-35.gif" alt="Image 10">
-                    <img src="https://media1.giphy.com/media/J4OwT8gBCqfYg0Hhfm/200w.gif" alt="Image 4">
+                    <img src="./assets/2.jpg" alt="Image 7" class="filter naming strategy">
+                    <img src="./assets/4.jpg" alt="Image 8" class="filter brand-creation brand-strategy">
+                    <img src="./assets/7.jpg" alt="Image 9" class="filter campaigns strategy visual-identity">
+                    <img src="./assets/10.jpg" alt="Image 10" class="filter campaigns brand-strategy">
+                    <img src="./assets/14.jpg" alt="Image 11" class="filter print brand-strategy copywriting">
+                    <img src="./assets/1.jpg" alt="Image 12" class="filter brand-creation brand-strategy">
+                    <img src="./assets/15.jpg" alt="Image 13" class="filter print brand-strategy copywriting">
+                    <img src="./assets/6.jpg" alt="Image 14" class="filter brand-creation brand-strategy">
+                </div>
                 </div>
             </div>
         </div>
+        
     </section>
 
     <script src="script.js"></script>
