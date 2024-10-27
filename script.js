@@ -86,9 +86,7 @@ return arr.reduce(
 
 document.addEventListener('DOMContentLoaded',function(event){
 var dataText = [ 
-    "> tèn tén ten là một tổ hợp thiết kế sáng tạo đa lĩnh vực — nơi những bằng hữu cùng nhau làm việc và sinh hoạt tại Thành phố Hồ Chí Minh.", 
-    "> Với mong muốn lắng nghe tường tận tâm ý, chúng tôi đồng hành cùng khách hàng tìm đến giải pháp hiệu quả nhất trong các lĩnh vực dịch vụ, nghiên cứu và tư vấn chiến lược, xây dựng thương hiệu để tạo ra các sản phẩm không chỉ dừng lại ở phần thị giác mà còn có ý nghĩa cô đọng.",  
-    "> Your practice spans many different design disciplines — graphic, interaction, brand, product, data viz, motion — and seems to seamlessly fuse them together in a way that feels both brand new yet coherent and pragmatic. How do you think about these different disciplines when it comes to your work, and is making a distinction between these practices important?"
+    "> Nguyen Trang is a graphic / brand designer based in HCMC, specializing in brand identity design. her portfolio, gobvnanas, showcases her selected projects.",
     ];
 function typeWriter(text, i, fnCallback) {
 if (i < (text.length)) {
@@ -99,14 +97,14 @@ setTimeout(function() {
 }, 100);
 }
 else if (typeof fnCallback == 'function') {
-setTimeout(fnCallback, 600);
+setTimeout(fnCallback, 00);
 }
 }
 function StartTextAnimation(i) {
 if (typeof dataText[i] == 'undefined'){
     setTimeout(function() {
         StartTextAnimation(0);
-    }, 5000);
+    }, 20000);
 }
 if (i < dataText[i].length) {
 typeWriter(dataText[i], 0, function(){
@@ -183,7 +181,7 @@ infiniteScroll(column2);
 
 
 const projectsData = {
-  "STAN MUSIC AWARDS": {
+  "stan music awards": {
     year: "2024",
     type: "branding, visual identity, copywriting",
     images: [
@@ -192,7 +190,7 @@ const projectsData = {
       "/assets/3.jpg"
     ]
   },
-  "TICOS COFFEE": {
+  "ticos coffee": {
     year: "2024",
     type: "logo design, branding, visual identity, copywriting",
     images: [
@@ -200,7 +198,7 @@ const projectsData = {
       "/assets/5.jpg"
     ]
   },
-  "DEL LUNA DECOR": {
+  "del luna decor": {
     year: "2022",
     type: "web design",
     images: [
@@ -208,7 +206,7 @@ const projectsData = {
       "/assets/7.jpg"
     ]
   },
-  "NOT JUST A LABEL": {
+  "not just a label": {
     year: "2021",
     type: "ecommerce design",
     images: [
@@ -216,7 +214,7 @@ const projectsData = {
       "/assets/9.jpg"
     ]
   },
-  "PROJECT FIVE": {
+  "project five": {
     year: "2020",
     type: "graphic design, campaigns",
     images: [
@@ -235,9 +233,9 @@ document.querySelectorAll('.project-item').forEach(item => {
     const projectData = projectsData[projectName];
 
     document.querySelector('.project-info').innerHTML = `
-      <h2>${projectName}</h2>
-      <p>Type: ${projectData.type}</p>
-      <p>Year: ${projectData.year}</p>
+      <p>>> ${projectName}</p>
+      <p>type: ${projectData.type}</p>
+      <p>year: ${projectData.year}</p>
     `;
 
     const projectImagesContainer = document.querySelector('.project-images');
