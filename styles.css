@@ -71,7 +71,6 @@ body, html {
     color: rgb(0, 0, 0);
 }
 
-
 @media (max-width: 1024px) {
     .column-right {
         display: none;
@@ -89,8 +88,6 @@ body, html {
         width: 70%;
     }
 }
-
-
 
 @media (min-width: 1182px) {
     .column-left {
@@ -204,7 +201,6 @@ body, html {
 .tab-content {
     display: none;
     overflow-y: auto;
-
 }
 
 .tab-content.active {
@@ -249,14 +245,12 @@ em{
 .project-details {
     display: flex;
     width: 100%;
-    
 }
 
 .project-images {
     width: 68%;
     height: 97.7vh;
     overflow-y: auto;
-    
 }
 
 .project-images img {
