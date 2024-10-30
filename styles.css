@@ -10,6 +10,7 @@ body, html {
     font-size: 16px;
     line-height: 1.8rem;
     height: 100vh;
+    height: 100svh;
     overscroll-behavior-y: none;
 }
 
@@ -26,6 +27,7 @@ body, html {
 .container {
     display: flex;
     height: 100vh;
+    height: 100svh;
 }
 
 .column-left {
@@ -39,6 +41,7 @@ body, html {
     padding: 10 10 10 0;
     width: 75%;
     height: 98.9vh;
+    height: 98.9svh;
     overflow-y:hidden;
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +129,7 @@ body, html {
     flex: 1;
     width: auto;
     height: 100vh;
+    height: 100svh;
     overflow-y: scroll;
 }
 
@@ -250,6 +254,7 @@ em{
 .project-images {
     width: 68%;
     height: 97.7vh;
+    height: 97.7svh;
     overflow-y: auto;
 }
 
