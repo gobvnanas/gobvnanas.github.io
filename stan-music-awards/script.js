@@ -8,16 +8,6 @@ function showTabContent(tab) {
   document.addEventListener('DOMContentLoaded', function () {
     showTabContent('projects');
   });
-  function changeTab(tab, event) {
-    event.preventDefault();
-    showTabContent(tab);
-    const newUrl = `/${tab}`;
-    window.history.pushState({ tab }, '', newUrl);
-  }
-  window.addEventListener('popstate', function (event) {
-    if (event.state && event.state.tab) {
-        showTabContent(event.state.tab); }
-  });
   
   function toggleDropdown() {
     const dropdownContent = document.querySelector('.dropdown-content');
