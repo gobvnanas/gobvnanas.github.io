@@ -1,4 +1,3 @@
-
 function showTabContent(tab) {
   document.querySelectorAll('.tab-content').forEach(function (content) {
       content.style.display = 'none';
@@ -8,6 +7,17 @@ function showTabContent(tab) {
 
 document.addEventListener('DOMContentLoaded', function () {
   showTabContent('home');
+});
+
+function changeTab(tab, event) {
+  event.preventDefault();
+  showTabContent(tab);
+  const newUrl = `/${tab}`;
+  window.history.pushState({ tab }, '', newUrl);
+}
+window.addEventListener('popstate', function (event) {
+  if (event.state && event.state.tab) {
+      showTabContent(event.state.tab); }
 });
 
 function toggleDropdown() {
@@ -160,8 +170,6 @@ document.querySelectorAll('.dropdown-content a').forEach(function(link) {
         filterImages();
     });
 });
-
-
 function infiniteScroll(column) {
 column.addEventListener('scroll', () => {
   if (column.scrollTop + column.clientHeight >= column.scrollHeight - 5) {
@@ -169,14 +177,9 @@ column.addEventListener('scroll', () => {
   }
 });
 }
-
 document.addEventListener("DOMContentLoaded", function() {
 const column1 = document.getElementById('column-a');
 const column2 = document.getElementById('column-b');
-
 infiniteScroll(column1);
 infiniteScroll(column2);
 });
-
-
-
