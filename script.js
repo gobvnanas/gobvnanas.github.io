@@ -9,17 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   showTabContent('home');
 });
 
-function changeTab(tab, event) {
-  event.preventDefault();
-  showTabContent(tab);
-  const newUrl = `/${tab}`;
-  window.history.pushState({ tab }, '', newUrl);
-}
-window.addEventListener('popstate', function (event) {
-  if (event.state && event.state.tab) {
-      showTabContent(event.state.tab); }
-});
-
 function toggleDropdown() {
   const dropdownContent = document.querySelector('.dropdown-content');
   const scrollableText = document.querySelector('.intro');
@@ -125,19 +114,15 @@ typeWriter(dataText[i], 0, function(){
 StartTextAnimation(0);
 });
 
-
 let activeFilters = [];
-
 function filterImages() {
     let images = document.querySelectorAll('.filter');
-
     images.forEach(function(image) {
         if (activeFilters.length === 0 || activeFilters.includes('all')) {
             image.style.display = 'block';
         } else {
             let imageClasses = Array.from(image.classList);
             let match = activeFilters.some(filter => imageClasses.includes(filter));
-
             image.style.display = match ? 'block' : 'none';
         }
     });
@@ -146,14 +131,11 @@ function filterImages() {
 document.querySelectorAll('.dropdown-content a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-
         let filter = this.dataset.filter;
-
         if (filter === 'all') {
             activeFilters = ['all'];
         } else {
             let filterIndex = activeFilters.indexOf(filter);
-
             if (filterIndex > -1) {
                 activeFilters.splice(filterIndex, 1);
             } else {
