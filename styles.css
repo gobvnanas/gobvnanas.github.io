@@ -143,7 +143,6 @@ body, html {
     width: 100%;
     height: auto;
     border: 1px solid black;
-    
 }
 
 .image-column:hover {
@@ -243,4 +242,33 @@ em{
 
 .dropdown-content a.active {
     border: 1px solid black;
+}
+
+.project-details {
+    display: flex;
+    width: 100%;
+}
+
+.project-images {
+    width: 68%;
+    height: 97.7vh;
+    height: 97.7svh;
+    overflow-y: auto;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.project-info {
+    width: 32%;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    overflow-y: auto;
+    height: 97.6vh;
+    height: 97.6svh;
 }
