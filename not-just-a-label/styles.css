@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Victor Mono', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.8rem;
+    overscroll-behavior-y: none;
+    height: 100vh;
+    height: 100svh;
+}
+
+::-moz-selection {
+    color: white;
+    background: black;
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+  
+.container {
+    display: flex;
+    height: 100vh;
+    height: 100svh;
+}
+
+.column-left {
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-right {
+    padding: 10 10 10 0;
+    width: 75%;
+    height: 98.9vh;
+    height: 98.9svh;
+    overflow-y:hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: none;
+}
+
+.menu-list li:hover {
+    color: rgb(0, 0, 0);
+    padding-left: 20px;
+    border: 1px solid black;
+}
+
+.menu-list li:hover::before {
+    content: ">";
+    position: absolute;
+    left: 0px;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1024px) {
+    .column-right {
+        display: none;
+    }
+    .column-left {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1180px) {
+    .column-left {
+        width: 30%;
+    }
+    .column-right {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1182px) {
+    .column-left {
+        width: 25%;
+    }
+    .column-right {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .column-left {
+        width: 26%;
+    }
+    .column-right {
+        width: 74%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .column-left {
+        width: 25%;
+    }
+    .column-right {
+        width: 75%;
+    }
+}
+.row {
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+    display: block;
+}
+
+.intro {
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 50%;
+    padding-right: 11px;
+}
+
+.dropdown-header {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-content.open {
+    display: block;
+    height: auto;
+}
+
+.tab-content {
+    display: none;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.hahaha{
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+    color: black;
+    text-decoration: underline;
+}
+
+.f{
+    text-decoration:none;
+}
+
+.f:hover{
+    border: 1px solid black;
+}
+
+em{
+    border-right: 11px solid black;
+    animation: caret 1s steps(1) infinite;
+}
+
+.project-item{
+    color: black;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.dropdown-content a.active {
+    border: 1px solid black;
+}
+
+
+.project-details {
+    display: flex;
+    width: 100%;
+}
+
+.project-images {
+    width: 68%;
+    height: 97.7vh;
+    height: 97.7svh;
+    overflow-y: auto;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.project-info {
+    width: 32%;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    overflow-y: auto;
+    height: 97.6vh;
+    height: 97.6svh;
+}
