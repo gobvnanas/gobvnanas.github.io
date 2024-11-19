@@ -85,7 +85,7 @@ return arr.reduce(
 
 document.addEventListener('DOMContentLoaded',function(event){
 var dataText = [ 
-    "> Nguyen Trang is a graphic / brand designer based in HCMC, specializing in brand identity design. her portfolio, gobvnanas, showcases her selected projects.",
+    "> TRANG N. is a graphic / brand designer based in HCMC, specializing in brand identity design. her portfolio, gobvnanas, showcases her selected projects.",
     ];
 function typeWriter(text, i, fnCallback) {
 if (i < (text.length)) {
@@ -115,14 +115,17 @@ StartTextAnimation(0);
 });
 
 let activeFilters = [];
+
 function filterImages() {
     let images = document.querySelectorAll('.filter');
+
     images.forEach(function(image) {
         if (activeFilters.length === 0 || activeFilters.includes('all')) {
             image.style.display = 'block';
         } else {
             let imageClasses = Array.from(image.classList);
             let match = activeFilters.some(filter => imageClasses.includes(filter));
+
             image.style.display = match ? 'block' : 'none';
         }
     });
@@ -131,11 +134,14 @@ function filterImages() {
 document.querySelectorAll('.dropdown-content a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         e.preventDefault();
+
         let filter = this.dataset.filter;
+
         if (filter === 'all') {
             activeFilters = ['all'];
         } else {
             let filterIndex = activeFilters.indexOf(filter);
+
             if (filterIndex > -1) {
                 activeFilters.splice(filterIndex, 1);
             } else {
