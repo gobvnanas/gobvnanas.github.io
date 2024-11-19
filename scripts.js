@@ -8,7 +8,7 @@ function showTabContent(tab) {
   document.addEventListener('DOMContentLoaded', function () {
     showTabContent('projects');
   });
-  
+
   function toggleDropdown() {
     const dropdownContent = document.querySelector('.dropdown-content');
     const scrollableText = document.querySelector('.intro');
@@ -93,3 +93,20 @@ function showTabContent(tab) {
   const column2 = document.getElementById('column-b');
   infiniteScroll(column1);
   infiniteScroll(column2); });
+  
+document.addEventListener("DOMContentLoaded", () => {
+  const imageContainer = document.querySelector(".project-images");
+  const initialImages = Array.from(imageContainer.children);
+  const loadMoreImages = () => {
+    initialImages.forEach((img) => {
+      const newImg = img.cloneNode();
+      imageContainer.appendChild(newImg);
+    });
+};
+imageContainer.addEventListener("scroll", () => {
+    if (
+      imageContainer.scrollTop + imageContainer.clientHeight >=
+      imageContainer.scrollHeight - 50
+    ) {loadMoreImages();}
+  });
+});
