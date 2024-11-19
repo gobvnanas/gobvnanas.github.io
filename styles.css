@@ -74,6 +74,16 @@ body, html {
     color: rgb(0, 0, 0);
 }
 
+.menu-list .project-item a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu-list .project-item a:hover {
+    color: black;
+}
+
 @media (max-width: 1024px) {
     .column-right {
         display: none;
@@ -143,6 +153,7 @@ body, html {
     width: 100%;
     height: auto;
     border: 1px solid black;
+    
 }
 
 .image-column:hover {
@@ -182,9 +193,24 @@ body, html {
 
 .intro {
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: scroll; 
     height: 50%;
     padding-right: 11px;
+}
+
+row.intro {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    
+}
+
+.row.intro::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.row.intro::-webkit-scrollbar-thumb {
+    background-color: black;
 }
 
 .dropdown-header {
@@ -253,7 +279,9 @@ em{
     width: 68%;
     height: 97.7vh;
     height: 97.7svh;
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .project-images img {
@@ -263,12 +291,24 @@ em{
     border: 1px solid black;
 }
 
+.project-images::-webkit-scrollbar {
+    display: none;
+  }
+
 .project-info {
     width: 32%;
     padding: 10px;
     margin-left: 10px;
     border: 1px solid black;
-    overflow-y: auto;
+    overflow-y: scroll;
     height: 97.6vh;
     height: 97.6svh;
+}
+
+.project-info::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.project-info::-webkit-scrollbar-thumb {
+    background-color: black;
 }
