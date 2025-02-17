@@ -4,14 +4,29 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Helvetica Narrow CE Regular";
+    src: url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.eot");
+    src: url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f72b1d468cfaae873bfc1550df0a0f9c.svg#Helvetica Narrow CE Regular")format("svg");
+}
+
 body, html {
-    font-family: 'Victor Mono', monospace;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.8rem;
+    font-family: "Helvetica Narrow CE Regular";
+    font-size: 22px;
+    letter-spacing: 1px;
+    word-spacing: auto;
+    line-height: 30px;
     overscroll-behavior-y: none;
     height: 100vh;
     height: 100svh;
+    /*
+    color:aliceblue;
+    text-shadow: 0 1px 1px hsla(0, 0%, 49%, 0.593);
+    */
 }
 
 ::-moz-selection {
